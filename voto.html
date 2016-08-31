@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+	<title>Verifica Voto</title>
+</head>
+<body onload="verificaVoto()">
+	<script type="text/javascript">
+		function verificaVoto(idade){
+			if (idade<16){
+				alert("Voto não permitido");
+			}else if (idade>=16 && idade<17 || idade>=65){
+				alert("Voto opcional");
+			}else if (idade>=18){
+				alert("Voto obrigatório");
+			}
+		}
+		function idade(){
+			var idade = prompt("Digite a sua idade");
+			idade = parseInt(idade);
+			return idade;
+		}
+		var idade = idade();
+		verificaVoto(idade);
+	</script>
+</body>
+</html> 
